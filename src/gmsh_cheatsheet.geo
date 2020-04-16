@@ -10,6 +10,10 @@ P1 = newp;
 // Point(<POINT_ID>) = {<X>, <Y>, <Z>};
 Point(P1) = {1.0, 0.0, 0.0};
 
+// get coordinates of a point
+// <NAME>[] = Point{<POINT_ID>};
+coordinates[] = Point{P1};
+
 
 // Curves
 
@@ -35,6 +39,12 @@ L3 = newl; Line(L3) = {P3, P1};
 
 Curve Loop(LL1) = {L1, L2, L3};
 
+// get points of a line
+// <NAME>[] = PointsOf{Line{<LINE_1_ID>, ..., <LINE_N_ID>}};
+points[] =  PointsOf{
+  Line{L1};
+  Line{L3};
+};
 
 
 // Surfaces
