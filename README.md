@@ -2,6 +2,8 @@
 
 Short overview of basic commands in gmsh.
 
+# Geometry
+
 ## Points
 
 ### create point id
@@ -50,6 +52,8 @@ LL1 = newll;
 
 ### create new line loop
 
+Creating a line loop demands that the are continous and direction can not be neglected.
+
 ```geo
 // Curve Loop(<LINE_LOOP_ID>) = {<LINE_1_ID>, ..., <LINE_N_ID>};
 Curve Loop(LL1) = {L1, L2, L3};
@@ -58,9 +62,12 @@ Curve Loop(LL1) = {L1, L2, L3};
 ### get points of a line
 
 ```geo
-// <NAME>[] = PointsOf{Line{<LINE_1_ID>, ..., <LINE_N_ID>}};
-points[] =  PointsOf{
-  Line{L1};
+// <NAME>[] = PointsOf{Line{<LINE_1_ID>, ..., <LINE_N-1_ID>}; Line{<LINE_N_ID>}; };
+line_points[] =  PointsOf{
+  Line{
+    L1,
+    L2
+  };
   Line{L3};
 };
 ```
@@ -80,3 +87,33 @@ S1 = news;
 // Surfaces(<SURFACE_ID> = {<LINE_LOOP_ID>})
 Surface(S1) = {LL1};
 ```
+
+### get points of a surface
+
+```geo
+// <NAME>[] = PointsOf{Surface{<SURFACE_1_ID>, ..., <SURFACE_N-1_ID>}; Surface{<SURFACE_N_ID>}; };
+surface_points[] = PointsOf{
+  Surface{
+    S1,
+    S2
+  };
+};
+```
+
+## Volumes
+
+### create new volume id
+
+```geo
+// <NAME> = newv;
+V1 = newv;
+```
+
+### create new volume
+
+```geo
+// Volume(<VOLUME_ID>) = {<SURFACE_LOOP_ID>};
+ Volume(V1) = {SL1};
+```
+
+# Mesh
