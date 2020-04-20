@@ -117,3 +117,19 @@ V1 = newv;
 ```
 
 # Mesh
+
+## Structured Mesh
+
+### create structured mesh for a 1D element
+
+```geo
+// Transfinite Curve {<CURVE_1_ID>, ... <CURVE_N_ID>} = <NUMBER_OF_NODES> Using Progression <PROGRESSION_FACTOR> []
+Transfinite Curve {L1, L2, L3, L4, L5, L6} = 10 Using Progression 1;
+```
+
+### create structures mesh for a 2D element
+
+```geo
+// Transfinite Surface {<SURFACE_ID>} = [{<POINT_1_ID>, <POINT_2_ID>, <POINT_3_ID> [, <POINT_4_ID>]}]
+Transfinite Surface {S1} = {P1, P2, P3};
+```
