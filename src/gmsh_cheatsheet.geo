@@ -102,6 +102,47 @@ V1 = newv;
  Volume(V1) = {SL1};
 
 
+// Miscellaneous
+
+// Print to terminal
+
+// print text to terminal
+// Printf("[Text][<>][Text]", )
+Printf("Text");
+
+// print variable to terminal
+// Printf("<FORMATTING_CHARACTER>", <>);
+Printf("%g", V1);
+
+// Lists
+
+/// define a list
+// <NAME>[] = {<ITEM_1>, ..., <ITEM_N>};
+list[] = {1, 2, 3, 4, 5, 6};
+
+// access a single item from a list
+// <LIST>[<ITEM>];
+list_item = list[0];
+Printf("Item 0 in list: %g", list_item);
+
+// access a sequence of items from a list
+// <LIST>[{<ITEM_1>:<ITEM_N>:<SEQUENCE_STEP>}];
+list1[] = list[{0:5}];
+list2[] = list[{0:5:2}];
+
+// access all items form a list
+// <IDENTIFIER>[] = <IDENTIFIER>[];
+list3[] = list[];
+Printf("Items of list1: %g, %g, %g, %g, %g, %g", list1[]);
+Printf("Items of list2: %g, %g, %g", list2[]);
+Printf("Items of list3: %g, %g, %g, %g, %g, %g", list3[]);
+
+// get the size of a list
+// <SIZE_LIST> = #<LIST>[];
+size_list = #list[];
+Printf("Size of List: %g", size_list);
+
+
  // Mesh
 
  // Structured Mesh
