@@ -1,6 +1,7 @@
 # gmsh_cheatsheet
 
 Short overview of basic commands in gmsh.
+The official manual you can find [here](http://gmsh.info/doc/texinfo/gmsh.html)
 
 # Geometry
 
