@@ -133,14 +133,14 @@ list1[] = list[{0:5}];
 list2[] = list[{0:5:2}];
 
 // access all items form a list
-// <IDENTIFIER>[] = <IDENTIFIER>[];
+// <IDENTIFIER>[];
 list3[] = list[];
 Printf("Items of list1: %g, %g, %g, %g, %g, %g", list1[]);
 Printf("Items of list2: %g, %g, %g", list2[]);
 Printf("Items of list3: %g, %g, %g, %g, %g, %g", list3[]);
 
 // get the size of a list
-// <SIZE_LIST> = #<LIST>[];
+// #<LIST>[];
 size_list = #list[];
 Printf("Size of List: %g", size_list);
 

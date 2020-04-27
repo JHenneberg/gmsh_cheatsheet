@@ -148,7 +148,7 @@ V1 = newv;
 
 ```gmsh
   // <IDENTIFIER>[<ITEM_ID>];
-  list[0];
+  list_item = list[0];
 ```
 
 ### access a sequence of items from a list
@@ -162,14 +162,14 @@ V1 = newv;
 ### access all items form a list
 
 ```gmsh
-  // <IDENTIFIER>[] = <IDENTIFIER>[];
+  // <IDENTIFIER>[];
   list3[] = list[];
 ```
 
 ### get the size of a list
 
 ```gmsh
-  // <SIZE_LIST> = #<LIST>[];
+  // #<LIST>[];
   size_list = #list[];
 ```
 
